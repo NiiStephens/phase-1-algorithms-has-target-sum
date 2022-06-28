@@ -8,11 +8,27 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  The function argument when any two pairs are passed should return the target.
+  two pairs in array sums up to target return true
+  two pairs in array sums is greater than target return false
+
 */
 
 /*
   Add written explanation of your solution here
 */
+function hasTargetSum(array, target) {
+  result = false;
+  for(let i = 0; i < array.length; i++){
+    for(let j = i+1; j < array.length; j++){
+      if(array[i]+array[j] === target) {
+        result = true;
+      }
+      
+    }
+  }
+  return result
+}
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
